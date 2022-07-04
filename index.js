@@ -10,16 +10,7 @@ const form = `<div>
 </div>`;
 
 function table() {
-  let table = `<table class="table">
-  <thead>
-    <tr>
-      <th clsaa="col-1">NO</th>
-      <th clsaa="col-3">title</th>
-      <th clsaa="col-4">Author</th>
-      <th clsaa="col-2">Remove</th>
-    </tr>
-  </thead>
-  <tbody>`;
+  let table = `<table class="table"><thead><tr><th clsaa="col-1">NO</th><th clsaa="col-3">title</th><th clsaa="col-4">Author</th><th clsaa="col-2">Remove</th></tr></thead><tbody>`;
   for (let i = 0; i < details.length; i++) {
     table =
       table +
