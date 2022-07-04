@@ -1,5 +1,5 @@
 /* eslint linebreak-style: ["error", "unix"] */
-let form = `<div>
+const form = `<div>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title">
@@ -23,18 +23,14 @@ function table() {
   </thead>
   <tbody>`;
   for (let i = 0; i < details.length; i++) {
-    table =
-      table +
-      `<tr>
+    table += `<tr>
       <td>${i + 1}</td>
       <td>${details[i].title}</td>
       <td>${details[i].author}</td>
       <td><button type="button" class="btn btn-danger" onclick="RemoveData(${i})">Remove</button></td>
     </tr> `;
   }
-  table =
-    table +
-    `</tbody>
+  table += `</tbody>
     </table>`;
   document.getElementById('table').innerHTML = table;
 }
@@ -54,14 +50,14 @@ function setData() {
   localStorage.setItem('details', JSON.stringify(details));
 }
 function ADD() {
-  let title = document.getElementById('title');
-  let author = document.getElementById('author');
+  const title = document.getElementById('title');
+  const author = document.getElementById('author');
 
-  if (title.value == 0) {
+  if (title.value === 0) {
     alert('title is Empty');
     return;
   }
-  if (author.value == 0) {
+  if (author.value === 0) {
     alert('Author is Empty');
     return;
   }
@@ -88,8 +84,8 @@ function RemoveData(index) {
 }
 
 function update(index) {
-  let newtitle = document.getElementById('newtitle');
-  let newauthor = document.getElementById('newauthor');
+  const newtitle = document.getElementById('newtitle');
+  const newauthor = document.getElementById('newauthor');
 
   details[index] = {
     title: newtitle.value,
