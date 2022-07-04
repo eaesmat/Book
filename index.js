@@ -1,6 +1,5 @@
- let form = 
- /* eslint linebreak-style: ["error", "unix"] */
- `<div>
+  /* eslint linebreak-style: ["error", "unix"] */
+ let form = `<div>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title">
