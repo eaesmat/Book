@@ -39,7 +39,7 @@ details = [];
 getData();
 table();
 function getData() {
-  let Data = localStorage.getItem('details');
+  const Data = localStorage.getItem('details');
   if (Data) {
     details = JSON.parse(Data);
   } else {
@@ -61,7 +61,7 @@ function ADD() {
     alert('Author is Empty');
     return;
   }
-  let data = {
+  const data = {
     title: title.value,
     author: author.value,
   };
