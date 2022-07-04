@@ -38,7 +38,6 @@ document.getElementById('form').innerHTML = form;
 function setData() {
   localStorage.setItem('details', JSON.stringify(details));
 }
-function getData()
 getData();
 table();
 function getData() {
