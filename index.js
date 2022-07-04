@@ -1,5 +1,5 @@
-  /* eslint linebreak-style: ["error", "unix"] */
- let form = `<div>
+/* eslint linebreak-style: ["error", "unix"] */
+let form = `<div>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title">
@@ -36,14 +36,14 @@ function table() {
     table +
     `</tbody>
     </table>`;
-  document.getElementById("table").innerHTML = table;
+  document.getElementById('table').innerHTML = table;
 }
-document.getElementById("form").innerHTML = form;
+document.getElementById('form').innerHTML = form;
 details = [];
 getData();
 table();
 function getData() {
-  let Data = localStorage.getItem("details");
+  let Data = localStorage.getItem('details');
   if (Data) {
     details = JSON.parse(Data);
   } else {
@@ -51,18 +51,18 @@ function getData() {
   }
 }
 function setData() {
-  localStorage.setItem("details", JSON.stringify(details));
+  localStorage.setItem('details', JSON.stringify(details));
 }
 function ADD() {
-  let title = document.getElementById("title");
-  let author = document.getElementById("author");
+  let title = document.getElementById('title');
+  let author = document.getElementById('author');
 
   if (title.value == 0) {
-    alert("title is Empty");
+    alert('title is Empty');
     return;
   }
   if (author.value == 0) {
-    alert("Author is Empty");
+    alert('Author is Empty');
     return;
   }
   let data = {
@@ -75,8 +75,8 @@ function ADD() {
   // console.log(details)
   // console.log(author.value)
   table();
-  title.value = "";
-  author.value = "";
+  title.value = '';
+  author.value = '';
 }
 function RemoveData(index) {
   details.splice(index, 1);
@@ -88,8 +88,8 @@ function RemoveData(index) {
 }
 
 function update(index) {
-  let newtitle = document.getElementById("newtitle");
-  let newauthor = document.getElementById("newauthor");
+  let newtitle = document.getElementById('newtitle');
+  let newauthor = document.getElementById('newauthor');
 
   details[index] = {
     title: newtitle.value,
@@ -97,7 +97,7 @@ function update(index) {
   };
   setData();
   table();
-  document.getElementById("form").innerHTML = form;
+  document.getElementById('form').innerHTML = form;
   // console.log('update work')
   // console.log(details)
 }
