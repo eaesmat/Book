@@ -38,6 +38,7 @@ document.getElementById('form').innerHTML = form;
 function setData() {
   localStorage.setItem('details', JSON.stringify(details));
 }
+getData();
 table();
 function getData() {
   const Data = localStorage.getItem('details');
@@ -47,6 +48,7 @@ function getData() {
     setData();
   }
 }
+
 function ADD() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
@@ -72,6 +74,7 @@ function RemoveData(index) {
   // console.log(details)
 }
 
+
 function update(index) {
   const newtitle = document.getElementById('newtitle');
   const newauthor = document.getElementById('newauthor');
@@ -86,3 +89,5 @@ function update(index) {
   // console.log('update work')
   // console.log(details)
 }
+
+
