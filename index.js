@@ -73,21 +73,3 @@ function RemoveData(index) {
   // console.log('Remove work')
   // console.log(details)
 }
-
-
-function update(index) {
-  const newtitle = document.getElementById('newtitle');
-  const newauthor = document.getElementById('newauthor');
-
-  details[index] = {
-    title: newtitle.value,
-    author: newauthor.value,
-  };
-  setData();
-  table();
-  document.getElementById('form').innerHTML = form;
-  // console.log('update work')
-  // console.log(details)
-}
-
-
