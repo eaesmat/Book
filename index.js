@@ -1,7 +1,6 @@
-var form = `<div>
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title">
+/*eslint linebreak-style: ["error", "unix"]*/
+const form = `<div>
+  <div class="form-group"><label for="title">Title</label><input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title">
   </div>
   <div class="form-group mt-3">
     <label for="author">Author</label>
