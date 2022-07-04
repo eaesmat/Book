@@ -7,6 +7,10 @@ function getData() {
   }
 }
 
+function setData() {
+  localStorage.setItem('details', JSON.stringify(details));
+}
+
 function ADD() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
@@ -23,6 +27,7 @@ function ADD() {
   title.value = '';
   author.value = '';
 }
+
 function RemoveData(index) {
   details.splice(index, 1);
   setData();
@@ -33,6 +38,7 @@ function RemoveData(index) {
 }
 
 /* eslint linebreak-style: ["error", "unix"] */
+
 const form = `<div>
   <div class="form-group">
     <label for="title">Title</label>
@@ -69,41 +75,5 @@ function table() {
 }
 document.getElementById('form').innerHTML = form;
 
-function setData() {
-  localStorage.setItem('details', JSON.stringify(details));
-}
 getData();
 table();
-function getData() {
-  const Data = localStorage.getItem('details');
-  if (Data) {
-    details = JSON.parse(Data);
-  } else {
-    setData();
-  }
-}
-
-function ADD() {
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
-  const data = {
-    title: title.value,
-    author: author.value,
-  };
-  details.push(data);
-  setData();
-
-  // console.log(details)
-  // console.log(author.value)
-  table();
-  title.value = '';
-  author.value = '';
-}
-function RemoveData(index) {
-  details.splice(index, 1);
-  setData();
-  table();
-
-  // console.log('Remove work')
-  // console.log(details)
-}
