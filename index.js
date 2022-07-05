@@ -35,6 +35,11 @@ function table() {
     </table>`;
   document.getElementById('table').innerHTML = table;
 }
+
+function setData() {
+  localStorage.setItem('details', JSON.stringify(details));
+}
+
 function getData() {
   const Data = localStorage.getItem('details');
   if (Data) {
@@ -43,10 +48,6 @@ function getData() {
     // eslint-disable-next-line no-unused-vars
     setData();
   }
-}
-
-function setData() {
-  localStorage.setItem('details', JSON.stringify(details));
 }
 
 // eslint-disable-next-line no-unused-vars
