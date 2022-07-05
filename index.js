@@ -1,7 +1,6 @@
-
 let details = [];
-/* eslint linebreak-style: ["error", "unix"] */
 
+/* eslint linebreak-style: ["error", "unix"] */
 const form = `<div>
   <div class="form-group">
     <label for="title">Title</label>
@@ -41,6 +40,7 @@ function getData() {
   if (Data) {
     details = JSON.parse(Data);
   } else {
+    // eslint-disable-next-line no-unused-vars
     setData();
   }
 }
