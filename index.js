@@ -1,4 +1,14 @@
 
+let details = [];
+
+function RemoveData(index) {
+  details.splice(index, 1);
+  setData();
+  table();
+
+  // console.log('Remove work')
+  // console.log(details)
+}
 
 /* eslint linebreak-style: ["error", "unix"] */
 
@@ -13,7 +23,7 @@ const form = `<div>
   </div>
   <button type="button" class="btn btn-primary mt-3" onclick="ADD()">ADD</button>
 </div>`;
-let details = [];
+
 function table() {
   let table = `<table class="table">
   <thead>
@@ -66,14 +76,7 @@ function ADD() {
   author.value = '';
 }
 
-function RemoveData(index) {
-  details.splice(index, 1);
-  setData();
-  table();
 
-  // console.log('Remove work')
-  // console.log(details)
-}
 document.getElementById('form').innerHTML = form;
 
 getData();
