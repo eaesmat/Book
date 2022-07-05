@@ -1,6 +1,5 @@
 
 let details = [];
-
 /* eslint linebreak-style: ["error", "unix"] */
 
 const form = `<div>
@@ -49,6 +48,7 @@ function getData() {
 function setData() {
   localStorage.setItem('details', JSON.stringify(details));
 }
+
 // eslint-disable-next-line no-unused-vars
 function ADD() {
   const title = document.getElementById('title');
@@ -67,7 +67,15 @@ function ADD() {
   author.value = '';
 }
 
+// eslint-disable-next-line no-unused-vars
+function RemoveData(index) {
+  details.splice(index, 1);
+  setData();
+  table();
 
+  // console.log('Remove work')
+  // console.log(details)
+}
 document.getElementById('form').innerHTML = form;
 
 getData();
