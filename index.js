@@ -54,18 +54,18 @@ function getData() {
 function ADD() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
-  if(title.value === "") {
+  if (title.value === '') {
     return;
   }
-  
-  if(author.value === "") {
+
+  if (author.value === '') {
     return;
   }
   const data = {
     title: title.value,
     author: author.value,
   };
- 
+
   details.push(data);
   setData();
 
