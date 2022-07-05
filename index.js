@@ -58,6 +58,7 @@ function ADD() {
     title: title.value,
     author: author.value,
   };
+ if(title.value && author.value){
   details.push(data);
   setData();
 
@@ -66,6 +67,7 @@ function ADD() {
   table();
   title.value = '';
   author.value = '';
+ }
 }
 
 // eslint-disable-next-line no-unused-vars
