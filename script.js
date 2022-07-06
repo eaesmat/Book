@@ -26,7 +26,7 @@ class Book {
     }
   }
 
-// remove
+  // remove
   remove() {
     const { id } = this;
     books = books.filter((book) => {
