@@ -14,31 +14,41 @@
 
 <body>
   <main>
-  <section id="all-book">
-    <div class="" id="show"></div>
-        <div class="section-one">
-          <h1>All awesome books</h1>
-        </div>
-
-        <div class="book-table">
-          <ul class="all-book">
-          </ul>
-        </div>
-  </section>
-          <hr>
-        <div class="form-section" id="add">
-            <h2>Add a new book</h2>
-            <div id="form">
-                <form id="formAdd">
-                    <input type="text" name="title" id="title" class="input" placeholder="Title"> <br> <br>
-                    <p class="error"></p> <br>
-                    <input type="text" name="author" id="author" class="input" placeholder="Author"> <br> <br>
-                    <button type="submit" class="btn">Add</button>
-                </form>
-            </div>
-        </div>  
+    <header>
+      <nav>
+        <h1 class="top-header">Awesome Books</h1>
+        <ul id = "top-nav">
+          <li><a href="#">List</a><span class="separator"></span></li>
+          <li><a href="#">Add new</a><span class="separator"></span></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="all-book">
+      <div class="" id="show"></div>
+      <div class="section-one">
+        <h1>All awesome books</h1>
+      </div>
+      <div class="book-table">
+        <ul class="all-book"></ul>
+      </div>
+    </section>
+    <hr>
+    <section class="form-section" id="add">
+      <h2>Add a new book</h2>
+      <div id="form">
+        <form id="formAdd">
+          <input type="text" name="title" id="title" class="input" placeholder="Title">
+          <p class="error"></p> 
+          <input type="text" name="author" id="author" class="input" placeholder="Author">
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+    </section>  
+    <footer>
+      <p>&copy; Copyright 2022 All rights reserved</p>
+    </footer>
   </main> 
     <script src="index.js"></script>
 </body>
-
 </html>

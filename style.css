@@ -7,6 +7,22 @@ main {
   justify-content: flex-start;
 }
 
+nav {
+  border: 3px solid #000;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
 .all-book li {
   display: flex;
   justify-content: space-between;
