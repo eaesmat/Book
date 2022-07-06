@@ -1,4 +1,4 @@
-const form = '';
+let form = '';
 let books = '';
 
 class Book {
@@ -38,7 +38,8 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-form  = document.getElementById('form');
+
+form = document.getElementById('form');
 books = JSON.parse(localStorage.getItem('books'));
 
 // books
