@@ -1,16 +1,20 @@
-li {
-  list-style: none;
+main {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .all-book li {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 8px 5px;
-}
-
-.table-list > li {
-  padding: 10px 15px;
+  margin: 0;
+  width: auto;
+  padding: 10px;
+  gap: 10px;
 }
 
 .all-book li .title {
@@ -18,26 +22,42 @@ li {
 }
 
 .all-book {
-  width: 30%;
-  margin-left: 30%;
+  padding: 0;
+  border: 3px solid #000;
 }
 
-h2, h1 {
+li:nth-child(odd) {
+  background-color: rgb(222, 222, 222);
+}
+
+h2,
+h1 {
   text-align: center;
-
 }
+
 #formAdd {
-  width: 50%;
-  margin-left: 42%;
+  height: auto;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 2px;
 }
 
-#formAdd button {
-  margin-left: 22%;
+#formAdd input {
+  margin: 0;
+  padding: 2px;
+  border: 3px solid;
+  width: 100%;
 }
+
 button {
-  height: 20px;
+  border-radius: 0;
+  padding: 1px 3px;
 }
 
-li {
-  border: 1px solid;
+hr {
+  border-bottom: 2px solid #000;
+  width: 10%;
 }
