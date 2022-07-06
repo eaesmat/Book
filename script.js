@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 let books = JSON.parse(localStorage.getItem('books'));
-
+// add class
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -26,6 +26,7 @@ class Book {
     }
   }
 
+// remove
   remove() {
     const { id } = this;
     books = books.filter((book) => {
