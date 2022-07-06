@@ -1,9 +1,43 @@
-/* * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+li {
+  list-style: none;
 }
 
-/* #form{
-    margin: 2% 30%;
-} */
+.all-book li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 8px 5px;
+}
+
+.table-list > li {
+  padding: 10px 15px;
+}
+
+.all-book li .title {
+  font-weight: 600;
+}
+
+.all-book {
+  width: 30%;
+  margin-left: 30%;
+}
+
+h2, h1 {
+  text-align: center;
+
+}
+#formAdd {
+  width: 50%;
+  margin-left: 42%;
+}
+
+#formAdd button {
+  margin-left: 22%;
+}
+button {
+  height: 20px;
+}
+
+li {
+  border: 1px solid;
+}

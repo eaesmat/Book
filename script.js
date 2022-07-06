@@ -1,5 +1,5 @@
-const form = '';
-let books = '';
+const form = document.getElementById('form');
+let books = JSON.parse(localStorage.getItem('books'));
 
 class Book {
   constructor(title, author, id) {
@@ -38,8 +38,6 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-form  = document.getElementById('form');
-books = JSON.parse(localStorage.getItem('books'));
 
 // books
 function displayBooks(title, author, id) {
