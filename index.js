@@ -67,13 +67,23 @@ if (books !== null) {
     displayBooks(book.title, book.author, book.id);
   });
 }
+const date = document.getElementById('date');
+const shownDate = [(Date()).split(' ').splice(1,4).join(' ')];
+date.append(shownDate);
+// const days = ['sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+// const dayNo = day.getDate();
+// const year = day.getFullYear()
+// const month = day.getMonth();
+// date.append(dayNo);
+// date.append(month);
+// date.append(year);
 
 document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
-    const id = Date.now();
+    const id = Date();
     const book = new Book(title, author, id);
     book.newBook();
     if (title && author) {
