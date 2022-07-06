@@ -1,91 +1,85 @@
-let details = [];
+const form = document.getElementById('form');
+let books = JSON.parse(localStorage.getItem('books'));
+// add class
+class Book {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
 
-/* eslint linebreak-style: ["error", "unix"] */
-const form = `<div>
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" aria-describedby="authorHelp" placeholder="Enter Your title" required>
+  newBook() {
+    const { title, author, id } = this;
+    const bookList = { title, author, id };
+    books = JSON.parse(localStorage.getItem('books'));
+    if (title === '' || author === '') {
+      document.getElementById('error').innerHTML = 'Required';
+    } else if (books !== null) {
+      books.push(bookList);
+      localStorage.setItem('books', JSON.stringify(books));
+      books = JSON.parse(localStorage.getItem('books'));
+    } else {
+      books = [];
+      books.push(bookList);
+      localStorage.setItem('books', JSON.stringify(books));
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+  }
+
+  // remove
+  remove() {
+    const { id } = this;
+    books = books.filter((book) => {
+      if (book.id === id) {
+        return false;
+      }
+      return true;
+    });
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+// books
+function displayBooks(title, author, id) {
+  const bookList = document.querySelector('.all-book');
+  const items = document.createElement('li');
+  items.innerHTML += `
+  <div class="title-div"><td><q>${title} </q> by ${author}</td>
   </div>
-  <div class="form-group mt-3">
-    <label for="author">Author</label>
-    <input type="text" class="form-control" id="author" placeholder="Enter Your author" required>
-  </div>
-  <button type="button" class="btn btn-primary mt-3" onclick="ADD()">ADD</button>
-</div>`;
+     `;
+  const Rbtn = document.createElement('button');
+  Rbtn.textContent = 'Remove';
+  Rbtn.className = 'Rbtn';
+  items.appendChild(Rbtn);
+  bookList.appendChild(items);
 
-function table() {
-  let table = `<table class="table">
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>title</th>
-      <th>Author</th>
-    </tr>
-  </thead>
-  <tbody>`;
-  for (let i = 0; i < details.length; i += 1) {
-    table += `<tr>
-      <td>${i + 1}</td>
-      <td>${details[i].title}</td>
-      <td>${details[i].author}</td>
-      <td><button type="button" class="btn btn-danger" id="remove" onclick="RemoveData(${i})">Remove</button></td>
-    </tr> `;
-  }
-  table += `</tbody>
-    </table>`;
-  document.getElementById('table').innerHTML = table;
+  Rbtn.addEventListener('click', () => {
+    const book = new Book(title, author, id);
+    id = Rbtn.id;
+    book.remove();
+    items.remove();
+  });
 }
 
-function setData() {
-  localStorage.setItem('details', JSON.stringify(details));
+if (books !== null) {
+  books.forEach((book) => {
+    displayBooks(book.title, book.author, book.id);
+  });
 }
 
-function getData() {
-  const Data = localStorage.getItem('details');
-  if (Data) {
-    details = JSON.parse(Data);
-  } else {
-    // eslint-disable-next-line no-unused-vars
-    setData();
-  }
-}
-
-// eslint-disable-next-line no-unused-vars
-function ADD() {
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
-  if (title.value === '') {
-    return;
-  }
-
-  if (author.value === '') {
-    return;
-  }
-  const data = {
-    title: title.value,
-    author: author.value,
-  };
-
-  details.push(data);
-  setData();
-
-  // console.log(details)
-  // console.log(author.value)
-  table();
-  title.value = '';
-  author.value = '';
-}
-
-// eslint-disable-next-line no-unused-vars
-function RemoveData(index) {
-  details.splice(index, 1);
-  setData();
-  table();
-
-  // console.log('Remove work')
-  // console.log(details)
-}
-document.getElementById('form').innerHTML = form;
-
-getData();
-table();
+document.addEventListener('DOMContentLoaded', () => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const id = Date.now();
+    const book = new Book(title, author, id);
+    book.newBook();
+    if (title && author) {
+      displayBooks(book.title, book.author, book.id);
+    }
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+  });
+});

@@ -1,9 +1,63 @@
-/* * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+main {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* #form{
-    margin: 2% 30%;
-} */
+.all-book li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  width: auto;
+  padding: 10px;
+  gap: 10px;
+}
+
+.all-book li .title {
+  font-weight: 600;
+}
+
+.all-book {
+  padding: 0;
+  border: 3px solid #000;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(222, 222, 222);
+}
+
+h2,
+h1 {
+  text-align: center;
+}
+
+#formAdd {
+  height: auto;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+#formAdd input {
+  margin: 0;
+  padding: 2px;
+  border: 3px solid;
+  width: 100%;
+}
+
+button {
+  border-radius: 0;
+  padding: 1px 3px;
+}
+
+hr {
+  border-bottom: 2px solid #000;
+  width: 10%;
+}

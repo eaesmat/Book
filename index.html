@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Book</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <h1>Awesome Books</h1>
-    <div id="table" class="container-fluid"></div>
-    <div id="form" class="border p-5 rounded"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="./index.js"></script>
-  </body>
+<body>
+  <main>
+  <section id="all-book">
+    <div class="" id="show"></div>
+        <div class="section-one">
+          <h1>All awesome books</h1>
+        </div>
+
+        <div class="book-table">
+          <ul class="all-book">
+          </ul>
+        </div>
+  </section>
+          <hr>
+        <div class="form-section" id="add">
+            <h2>Add a new book</h2>
+            <div id="form">
+                <form id="formAdd">
+                    <input type="text" name="title" id="title" class="input" placeholder="Title"> <br> <br>
+                    <p class="error"></p> <br>
+                    <input type="text" name="author" id="author" class="input" placeholder="Author"> <br> <br>
+                    <button type="submit" class="btn">Add</button>
+                </form>
+            </div>
+        </div>  
+  </main> 
+    <script src="index.js"></script>
+</body>
+
 </html>
