@@ -1,5 +1,3 @@
-const form = document.getElementById('form');
-let books = JSON.parse(localStorage.getItem('books'));
 // add class
 class Book {
   constructor(title, author, id) {
@@ -8,40 +6,46 @@ class Book {
     this.id = id;
   }
 
+  books(value) {
+    this.value = value;
+  }
+
   newBook() {
+    let show;
     const { title, author, id } = this;
     const bookList = { title, author, id };
-    books = JSON.parse(localStorage.getItem('books'));
+    show = JSON.parse(localStorage.getItem('show'));
     if (title === '' || author === '') {
       document.getElementById('error').innerHTML = 'Required';
-    } else if (books !== null) {
-      books.push(bookList);
-      localStorage.setItem('books', JSON.stringify(books));
-      books = JSON.parse(localStorage.getItem('books'));
+    } else if (show !== null) {
+      show.push(bookList);
+      localStorage.setItem('show', JSON.stringify(show));
+      show = JSON.parse(localStorage.getItem('show'));
     } else {
-      books = [];
-      books.push(bookList);
-      localStorage.setItem('books', JSON.stringify(books));
-      books = JSON.parse(localStorage.getItem('books'));
+      show = [];
+      show.push(bookList);
+      localStorage.setItem('show', JSON.stringify(show));
+      show = JSON.parse(localStorage.getItem('show'));
     }
   }
 
   // remove
   remove() {
+    let show = '';
     const { id } = this;
-    books = books.filter((book) => {
+    show = show.filter((book) => {
       if (book.id === id) {
         return false;
       }
       return true;
     });
 
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('show', JSON.stringify(show));
   }
 }
 
-// books
-function displayBooks(title, author, id) {
+// show
+function displayshow(title, author, id) {
   const bookList = document.querySelector('.all-book');
   const items = document.createElement('li');
   items.innerHTML += `
@@ -61,13 +65,13 @@ function displayBooks(title, author, id) {
     items.remove();
   });
 }
-
-if (books !== null) {
-  books.forEach((book) => {
-    displayBooks(book.title, book.author, book.id);
+let show;
+if (show !== null) {
+  show.forEach((book) => {
+    displayshow(book.title, book.author, book.id);
   });
 }
-
+let form;
 document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -77,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const book = new Book(title, author, id);
     book.newBook();
     if (title && author) {
-      displayBooks(book.title, book.author, book.id);
+      displayshow(book.title, book.author, book.id);
     }
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
