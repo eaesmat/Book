@@ -69,7 +69,7 @@ if (books !== null) {
 }
 
 const date = document.getElementById('date');
-const shownDate = [(Date()).split(' ').splice(1,4).join(' ')];
+const shownDate = [Date().split(' ').splice(1, 4).join(' ')];
 date.append(shownDate);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,21 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
- const list = document.getElementById('all-book');
- const add = document.querySelector('.form-section');
- const contacts = document.getElementById('contacts');
- const listLink1 = document.getElementById('con-link1');
- const listLink2 = document.getElementById('con-link2');
- const listLink3 = document.getElementById('con-link3');
+const list = document.getElementById('all-book');
+const add = document.querySelector('.form-section');
+const contacts = document.getElementById('contacts');
+const listLink1 = document.getElementById('con-link1');
+const listLink2 = document.getElementById('con-link2');
+const listLink3 = document.getElementById('con-link3');
 
- listLink1.addEventListener('click', () => {
+listLink1.addEventListener('click', () => {
   list.classList.remove('show');
   listLink1.classList.add('active');
   contacts.classList.add('show');
   listLink3.classList.remove('active');
   listLink2.classList.remove('active');
   add.classList.add('show');
-})
+});
 
 listLink2.addEventListener('click', () => {
   listLink2.classList.add('active');
@@ -111,7 +111,7 @@ listLink2.addEventListener('click', () => {
   listLink1.classList.remove('active');
   contacts.classList.add('show');
   listLink3.classList.remove('active');
-})
+});
 
 listLink3.addEventListener('click', () => {
   contacts.classList.remove('show');
@@ -120,5 +120,4 @@ listLink3.addEventListener('click', () => {
   listLink1.classList.remove('active');
   listLink2.classList.remove('active');
   add.classList.add('show');
-})
-
+});
