@@ -45,6 +45,7 @@ nav {
 
 #top-nav li.active a {
   color: blue;
+  border-color: #000;
 }
 
 ul {
@@ -82,7 +83,6 @@ ul {
 }
 
 #all-book {
-  border: 3px solid magenta;
   width: 96vw;
   height: 70vh;
 }
@@ -136,7 +136,7 @@ footer p {
 }
 
 #date {
-  width: 90vw;
+  width: 96vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -146,16 +146,34 @@ footer p {
   background-color: #fff;
   border: 3px solid;
   padding: 3px 12px;
-  box-shadow: 2px 2px 3px;
-}
-
-.show {
-  display: none;
+  box-shadow: 2px 2px 1px;
 }
 
 .btn {
   border: 3px solid;
   margin-top: 30px;
   padding: 3px 12px;
-  box-shadow: 2px 2px 3px;
+  box-shadow: 2px 2px 1px;
+}
+
+#contacts-ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.contacts {
+  height: 70vh;
+  width: 96vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contacts h2 {
+  font-size: xx-large;
+}
+
+
+.show {
+  display: none;
 }
