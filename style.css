@@ -1,10 +1,75 @@
 main {
   margin: auto;
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+h2,
+h1 {
+  text-align: center;
+}
+
+nav {
+  border: 3px solid #000;
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+}
+
+#top-nav {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  height: auto;
+  margin: 0;
+}
+
+#con-link1 a,
+#con-link2 a {
+  border-right: 2px solid;
+}
+
+#top-nav li a {
+  color: #000;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#top-nav li.active a {
+  color: blue;
+  border-color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+#top-header {
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#add {
+  width: 50%;
+  height: 70vh;
+}
+
+.contacts h2 {
+  font-size: xx-large;
+}
+
+#add h2 {
+  font-size: xx-large;
 }
 
 .all-book li {
@@ -21,43 +86,93 @@ main {
   font-weight: 600;
 }
 
+#all-book {
+  width: 96vw;
+  height: 70vh;
+}
+
+#all-book h2 {
+  font-size: xx-large;
+}
+
 .all-book {
   padding: 0;
   border: 3px solid #000;
 }
 
-li:nth-child(odd) {
+.all-book li:nth-child(odd) {
   background-color: rgb(222, 222, 222);
-}
-
-h2,
-h1 {
-  text-align: center;
 }
 
 #formAdd {
   height: auto;
-  align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
   gap: 2px;
+  padding: 50px;
 }
 
 #formAdd input {
   margin: 0;
-  padding: 2px;
   border: 3px solid;
   width: 100%;
+  padding: 10px;
 }
 
 button {
   border-radius: 0;
-  padding: 1px 3px;
 }
 
 hr {
   border-bottom: 2px solid #000;
   width: 10%;
+}
+
+footer p {
+  color: #000;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 9px;
+  border: 3px solid;
+  width: 95vw;
+}
+
+#date {
+  width: 96vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Rbtn {
+  background-color: #fff;
+  border: 3px solid;
+  padding: 3px 12px;
+  box-shadow: 2px 2px 1px;
+}
+
+.btn {
+  border: 3px solid;
+  margin-top: 30px;
+  padding: 3px 12px;
+  box-shadow: 2px 2px 1px;
+}
+
+#contacts-ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.contacts {
+  height: 70vh;
+  width: 96vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show {
+  display: none;
 }
