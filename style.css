@@ -7,11 +7,16 @@ main {
   height: 100vh;
 }
 
+h2,
+h1 {
+  text-align: center;
+}
+
 nav {
   border: 3px solid #000;
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  width: 95vw;
   height: auto;
   margin: 0;
   padding: 5px;
@@ -53,14 +58,15 @@ ul {
   margin: 0;
 }
 
-
 #add {
   width: 50%;
   height: 70vh;
 }
+
 #add h2 {
-font-size: xx-large;
+  font-size: xx-large;
 }
+
 .all-book li {
   display: flex;
   justify-content: space-between;
@@ -75,6 +81,16 @@ font-size: xx-large;
   font-weight: 600;
 }
 
+#all-book {
+  border: 3px solid magenta;
+  width: 96vw;
+  height: 70vh;
+}
+
+#all-book h2 {
+  font-size: xx-large;
+}
+
 .all-book {
   padding: 0;
   border: 3px solid #000;
@@ -82,11 +98,6 @@ font-size: xx-large;
 
 .all-book li:nth-child(odd) {
   background-color: rgb(222, 222, 222);
-}
-
-h2,
-h1 {
-  text-align: center;
 }
 
 #formAdd {
@@ -121,7 +132,7 @@ footer p {
   font-weight: lighter;
   padding: 9px;
   border: 3px solid;
-  width: 90vw;
+  width: 95vw;
 }
 
 #date {
@@ -132,7 +143,10 @@ footer p {
 }
 
 .Rbtn {
-  background-color:#fff;
+  background-color: #fff;
+  border: 3px solid;
+  padding: 3px 12px;
+  box-shadow: 2px 2px 3px;
 }
 
 .show {
