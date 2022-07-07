@@ -1,11 +1,10 @@
 main {
   margin: auto;
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 20px;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 nav {
@@ -54,6 +53,14 @@ ul {
   margin: 0;
 }
 
+
+#add {
+  width: 50%;
+  height: 70vh;
+}
+#add h2 {
+font-size: xx-large;
+}
 .all-book li {
   display: flex;
   justify-content: space-between;
@@ -84,24 +91,23 @@ h1 {
 
 #formAdd {
   height: auto;
-  align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
   gap: 2px;
+  padding: 50px;
 }
 
 #formAdd input {
   margin: 0;
-  padding: 2px;
   border: 3px solid;
   width: 100%;
+  padding: 10px;
 }
 
 button {
   border-radius: 0;
-  padding: 1px 3px;
 }
 
 hr {
@@ -127,4 +133,15 @@ footer p {
 
 .Rbtn {
   background-color:#fff;
+}
+
+.show {
+  display: none;
+}
+
+.btn {
+  border: 3px solid;
+  margin-top: 30px;
+  padding: 3px 12px;
+  box-shadow: 2px 2px 3px;
 }
