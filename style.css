@@ -64,6 +64,10 @@ ul {
   height: 70vh;
 }
 
+.contacts h2 {
+  font-size: xx-large;
+}
+
 #add h2 {
   font-size: xx-large;
 }
@@ -169,11 +173,7 @@ footer p {
   flex-direction: column;
 }
 
-.contacts h2 {
-  font-size: xx-large;
-}
-
-
 .show {
+  
   display: none;
 }
